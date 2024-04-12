@@ -1,5 +1,9 @@
 from flask import Flask, make_response
+from dotenv import load_dotenv
 import sys
+
+# Load the environment variables
+load_dotenv()
 
 app = Flask(__name__)
 
