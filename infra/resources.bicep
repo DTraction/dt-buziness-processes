@@ -53,9 +53,19 @@ resource web 'Microsoft.Web/sites@2022-03-01' = {
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   name: 'app-${resourceToken}'
   location: location
+  // sku: {
+  //   name: 'F1'
+  //   tier: 'Free'
+  //   size: 'F1'
+  //   family: 'F'
+  //   capacity: 0
+  // }
+
   sku: {
-    name: 'S1'
+    name: 'B1'
+    tier: 'Basic'
   }
+  
   kind: 'linux'
   properties: {
     reserved: true
